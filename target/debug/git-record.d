@@ -1,1 +1,1 @@
-D:\workplace\playground\git-record\target\debug\git-record.exe: D:\workplace\playground\git-record\src\main.rs
+C:\Users\ssakib4040\workplace\playground\commit-record\target\debug\git-record.exe: C:\Users\ssakib4040\workplace\playground\commit-record\src\main.rs
