@@ -45,5 +45,17 @@ fn main() {
         }
     }
 
-    println!("Finished! A total of {} commits have been made.", target_commits);
+     // Step 2: Push the commits to the remote repository
+    Command::new("git")
+        .args(&["push"])
+        .output()
+        .expect("Failed to execute git push");
+
+        if !push_output.status.success() {
+            eprintln!("Error pushing to remote repository: {}", String::from_utf8_lossy(&push_output.stderr));
+        } else {
+            println!("Successfully pushed {} commits to the remote repository!", commit_count);
+        }
+    
+        println!("Finished! A total of {} commits have been made.", target_commits);
 }
