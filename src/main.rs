@@ -27,7 +27,7 @@ fn main() {
 
         // Stage the changes
         Command::new("git")
-            .args(&["add", file_name])
+            .args(&["add", "*"])
             .output()
             .expect("Failed to execute git add");
 
@@ -46,7 +46,7 @@ fn main() {
     }
 
      // Step 2: Push the commits to the remote repository
-    Command::new("git")
+    let push_output = Command::new("git")
         .args(&["push"])
         .output()
         .expect("Failed to execute git push");
