@@ -4,7 +4,7 @@ use std::time::{SystemTime, UNIX_EPOCH};
 use std::io::Write;
 
 fn main() {
-    let target_commits = 10_000_000; // Set your target number of commits
+    let target_commits = 1_000_000; // Set your target number of commits
     let mut commit_count = 0;
 
     println!("Starting commit generation...");
